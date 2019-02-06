@@ -16,9 +16,6 @@ gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 
-# Open weather gem
-gem 'open-weather'
-
 # figaro gem for api key
 gem 'figaro'
 

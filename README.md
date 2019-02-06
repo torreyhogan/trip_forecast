@@ -1,24 +1,8 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Website determines the best weather for three different destinations during the weekend. Currently set to Big Sur, Death Valley, and Yosemite. Uses OpenWeatherMap API to obtain five day forcast with 3hr resolution. The five day percipitation forecast is displayed for each location. The location with the least amount of percipitation is displayed at the bottom of the page with the percipitiation amount.
 
-Things you may want to cover:
+Files with majority of code: 
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+	trip_forecast/app/controller/places_controller.rb
+	trip_forecast/app/views/places/trip_weather.html.erb

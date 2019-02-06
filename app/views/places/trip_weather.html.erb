@@ -1,23 +1,65 @@
 <div class="container">
-	<h1>Camping Destinations</h1>
+	
 	<div class="jumbotron">
-		<h1><i class="fas fa-campground"></i> Weekend Trip Weather</h1>
+		<h1><i class="fas fa-campground"></i> Weekend Trip Weather Forecast</h1>
 	</div>
 
 	<div class="row">
 		<div class="col-lg-4 col-sm-4">
 			<h3 class="title">Yosemite National Park</h3>
-			<img class="img-thumbnail" src="https://images.unsplash.com/photo-1533593673317-24a13bb68966?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3a7e14cd4ccea148513e1bbbbc650ff2&auto=format&fit=crop&w=675&q=80">
+			<table>
+				<tr>
+					<th>Day</th>
+					<th>Rain</th>
+					<th>Snow</th>
+				</tr>
+				<% @yosemite_weather.each do |day, value| %>
+					<tr>
+						<td><%= day.strftime('%a') %></td>
+						<td><%= value[:rain].to_i %>mm</td>
+						<td><%= value[:snow].to_i %>mm</td>
+					</tr>
+				<% end %>
+			</table>
 		</div>
 		<div class="col-lg-4 col-sm-4">
 			<h3 class="title">Death Valley National Park</h3>
-			<img class="img-thumbnail" src="https://images.unsplash.com/photo-1533619771522-a3a9e28a75df?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d48cb974291c85c754c01d4bf09ce541&auto=format&fit=crop&w=634&q=80">
+			<table>
+				<tr>
+					<th>Day</th>
+					<th>Rain</th>
+					<th>Snow</th>
+				</tr>
+				<% @deathvalley_weather.each do |day, value| %>
+					<tr>
+						<td><%= day.strftime('%a') %></td>
+						<td><%= value[:rain] %>mm</td>
+						<td><%= value[:snow] %>mm</td>
+					</tr>
+				<% end %>
+			</table>
 		</div>
-			<h3 class="title">Big Sur State Park</h3>
+			
 		<div class="col-lg-4 col-sm-4">
-			<img class="img-thumbnail" src="https://images.unsplash.com/photo-1533575770077-052fa2c609fc?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ebb0b2d80f4b2d82f3587492b80e2321&auto=format&fit=crop&w=1350&q=80">
+			<h3 class="title">Big Sur State Park</h3>
+			<table>
+				<tr>
+					<th>Day</th>
+					<th>Rain</th>
+					<th>Snow</th>
+				</tr>
+				<% @bigsur_weather.each do |day, value| %>
+					<tr>
+						<td><%= day.strftime('%a') %></td>
+						<td><%= value[:rain] %>mm</td>
+						<td><%= value[:snow] %>mm</td>
+					</tr>
+				<% end %>
+			</table>
 		</div>
-	</div>
-</div>
 
-<p>@weather</p>
+		
+
+	</div>
+	<h3 class="title"><br><br><%= @winner[0] %> has the best weekend weather with only <%= @winner[1] %>mm of total percipitation. </h3>
+</div>
