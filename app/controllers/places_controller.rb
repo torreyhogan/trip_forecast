@@ -3,6 +3,7 @@ class PlacesController < ApplicationController
 	
 
 	def trip_weather
+		print "hello"
 		print @yosemite_weather = rain_data(query("7262586")["list"])
 		@deathvalley_weather = rain_data(query("5509851")["list"])
 		@bigsur_weather = rain_data(query("5334320")["list"])
