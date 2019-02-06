@@ -1,5 +1,8 @@
 class PlacesController < ApplicationController
 	include HTTParty
+
+	def hey
+	end
 	
 
 	def trip_weather
