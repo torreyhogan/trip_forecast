@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  # get '/sequoia', to: 'places#sequoia'
+  # get '/desolation_wilderness', to: 'places#desolation'
+  # get '/yosemite', to: 'places#yosemite'
+  get '/trip_weather', to: 'places#trip_weather'
 end
