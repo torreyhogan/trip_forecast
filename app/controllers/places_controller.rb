@@ -70,7 +70,8 @@ class PlacesController < ApplicationController
 
 	def query(city_id)
 		base_url = "http://api.openweathermap.org/data/2.5/forecast?id="
-		api_partial_url = "&APPID=#{ENV['open_weather_api_key'].to_s}"
+		# api_partial_url = "&APPID=#{ENV['open_weather_api_key'].to_s}"
+		api_partial_url = "&APPID=e724cd9cf3756d20f83e54afdd3bce1c"
 		url_input = base_url + city_id + api_partial_url
 		request = HTTParty.get(url_input.to_s).to_json
 		@request_hash = JSON.parse(request)
